@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title Google Calendar Integration
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css")
+  body
+    #calendar
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js")
+    script.
+      $(document).ready(function() {
+        $('#calendar').fullCalendar({
+          events: !{JSON.stringify(events)}
+        });
+      });
